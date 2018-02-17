@@ -17,15 +17,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //these should be set up by reading the json in part 3
     let marvelQuestions: [String] = ["marvel question1", "marvel question2","marvel question3"]
-    let marvelAnswers: [[String]] = [["marvel answer1 for Q1(right)", "marvel answer2 for Q1", "marvel answer3 for Q1"],["marvel answer1 for Q2", "marvel answer2 for Q2(right)", "marvel answer3 for Q2"],["marvel answer1 for Q3", "marvel answer2 for Q3", "marvel answer3 for Q3(right)"]]
+    let marvelAnswers: [[String]] = [["marvel answer1 for Q1(right)", "marvel answer2 for Q1", "marvel answer3 for Q1","marvel answer4 for Q1"],["marvel answer1 for Q2", "marvel answer2 for Q2(right)", "marvel answer3 for Q2", "marvel answer4 for Q2"],["marvel answer1 for Q3", "marvel answer2 for Q3", "marvel answer3 for Q3(right)", "marvel answer4 for Q3"]]
     let marvelCorrectAnswers: [Int] = [0,1,2]; //answer for question is the number of question for testing
     
     let mathQuestions: [String] = ["math question1", "math question2","math question3"]
-    let mathAnswers: [[String]] = [["math answer1 for Q1(right)", "math answer2 for Q1", "math answer3 for Q1"],["math answer1 for Q2", "math answer2 for Q2(right)", "math answer3 for Q2"],["math answer1 for Q3", "math answer2 for Q3", "math answer3 for Q3(right)"]]
+    let mathAnswers: [[String]] = [["math answer1 for Q1(right)", "math answer2 for Q1", "math answer3 for Q1", "math answer4 for Q1"],["math answer1 for Q2", "math answer2 for Q2(right)", "math answer3 for Q2", "math answer4 for Q2"],["math answer1 for Q3", "math answer2 for Q3", "math answer3 for Q3(right)","math answer4 for Q3"]]
     let mathCorrectAnswers: [Int] = [0,1,2];
     
     let sciQuestions: [String] = ["sci question1", "sci question2","sci question3"]
-    let sciAnswers: [[String]] = [["sci answer1 for Q1(right)", "sci answer2 for Q1", "sci answer3 for Q1"],["sci answer1 for Q2", "sci answer2 for Q2(right)", "sci answer3 for Q2"],["sci answer1 for Q3", "sci answer2 for Q3", "sci answer3 for Q3(right)"]]
+    let sciAnswers: [[String]] = [["sci answer1 for Q1(right)", "sci answer2 for Q1", "sci answer3 for Q1","sci answer4 for Q1"],["sci answer1 for Q2", "sci answer2 for Q2(right)", "sci answer3 for Q2","sci answer4 for Q2"],["sci answer1 for Q3", "sci answer2 for Q3", "sci answer3 for Q3(right)", "sci answer4 for Q3"]]
     let sciCorrectAnswers: [Int] = [0,1,2];
 
     

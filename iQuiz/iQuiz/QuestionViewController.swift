@@ -16,12 +16,12 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var btnAnswer3: UIButton!
     @IBOutlet weak var btnAnswer2: UIButton!
     @IBOutlet weak var btnAnswer1: UIButton!
-    
+    @IBOutlet weak var btnAnswer4: UIButton!
     
     //following variables are passed around viewcontrollers to keep track of which question is displayed
     var currentQuestion = 0;
     var questions: [String] = ["Question 1", "Question 2", "Question 3"]
-    var choices: [[String]] = [["answer 1,1", "answer 1,2" , "answer 1,3"],["answer 2,1", "answer 2,2" , "answer 2,3"],["answer 3,1", "answer 3,2" , "answer 3,3"]]
+    var choices: [[String]] = [["answer 1,1", "answer 1,2" , "answer 1,3", "answer 1,4"],["answer 2,1", "answer 2,2" , "answer 2,3", "answer 2,4"],["answer 3,1", "answer 3,2" , "answer 3,3", "answer 3,4"]]
     var correctAnswer: [Int] = [1,1,1];
     var lastSelectedAnswer = -1;
     var questionAnswered = 0;
@@ -32,6 +32,7 @@ class QuestionViewController: UIViewController {
         sender.backgroundColor = UIColor.lightGray
         btnAnswer2.backgroundColor = UIColor.white
         btnAnswer3.backgroundColor = UIColor.white
+        btnAnswer4.backgroundColor = UIColor.white
     }
     
     @IBAction func answerTwoSelected(_ sender: UIButton) {
@@ -39,6 +40,7 @@ class QuestionViewController: UIViewController {
         sender.backgroundColor = UIColor.lightGray
         btnAnswer1.backgroundColor = UIColor.white
         btnAnswer3.backgroundColor = UIColor.white
+        btnAnswer4.backgroundColor = UIColor.white
     }
     
     @IBAction func answerThreeSelected(_ sender: UIButton) {
@@ -46,14 +48,23 @@ class QuestionViewController: UIViewController {
         sender.backgroundColor = UIColor.lightGray
         btnAnswer1.backgroundColor = UIColor.white
         btnAnswer2.backgroundColor = UIColor.white
+        btnAnswer4.backgroundColor = UIColor.white
     }
     
+    @IBAction func answerFourSelected(_ sender: UIButton) {
+        lastSelectedAnswer = 3;
+        sender.backgroundColor = UIColor.lightGray
+        btnAnswer1.backgroundColor = UIColor.white
+        btnAnswer2.backgroundColor = UIColor.white
+        btnAnswer3.backgroundColor = UIColor.white
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         lblQuestion.text = questions[currentQuestion];
         btnAnswer1.setTitle(choices[currentQuestion][0], for: .normal)
         btnAnswer2.setTitle(choices[currentQuestion][1], for: .normal)
         btnAnswer3.setTitle(choices[currentQuestion][2], for: .normal)
+        btnAnswer4.setTitle(choices[currentQuestion][3], for: .normal)
         // Do any additional setup after loading the view.
     }
     

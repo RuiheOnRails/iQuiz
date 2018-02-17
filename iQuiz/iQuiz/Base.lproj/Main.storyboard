@@ -138,24 +138,31 @@
                                 <rect key="frame" x="25" y="258.5" width="325" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg0-y6-Ha6">
-                                        <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="37.5"/>
                                         <state key="normal" title="answer1"/>
                                         <connections>
                                             <action selector="answerOneSelected:" destination="KgL-xX-E09" eventType="touchUpInside" id="J3C-g5-qzm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d2-G2-Pj4">
-                                        <rect key="frame" x="0.0" y="50" width="325" height="50"/>
+                                        <rect key="frame" x="0.0" y="37.5" width="325" height="37.5"/>
                                         <state key="normal" title="answer2"/>
                                         <connections>
                                             <action selector="answerTwoSelected:" destination="KgL-xX-E09" eventType="touchUpInside" id="wJ3-Pp-91T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOc-5F-qNK">
-                                        <rect key="frame" x="0.0" y="100" width="325" height="50"/>
+                                        <rect key="frame" x="0.0" y="75" width="325" height="37.5"/>
                                         <state key="normal" title="answer3"/>
                                         <connections>
                                             <action selector="answerThreeSelected:" destination="KgL-xX-E09" eventType="touchUpInside" id="nkx-YZ-AKC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRg-ys-rwS">
+                                        <rect key="frame" x="0.0" y="112.5" width="325" height="37.5"/>
+                                        <state key="normal" title="answer4"/>
+                                        <connections>
+                                            <action selector="answerFourSelected:" destination="KgL-xX-E09" eventType="touchUpInside" id="EYJ-g9-YlL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -198,6 +205,7 @@
                         <outlet property="btnAnswer1" destination="sg0-y6-Ha6" id="qD3-vI-xGS"/>
                         <outlet property="btnAnswer2" destination="3d2-G2-Pj4" id="gQv-fV-As5"/>
                         <outlet property="btnAnswer3" destination="iOc-5F-qNK" id="DNp-s6-z0D"/>
+                        <outlet property="btnAnswer4" destination="bRg-ys-rwS" id="8dx-he-sZH"/>
                         <outlet property="lblQuestion" destination="JDb-vT-2i3" id="VQZ-wi-Q1R"/>
                         <segue destination="Vy5-Hm-hFF" kind="show" identifier="toReveal" id="QbF-XH-vXC"/>
                     </connections>
@@ -390,7 +398,7 @@
         <image name="marvel" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ixN-7I-t9X"/>
-        <segue reference="Txs-Qj-e1H"/>
+        <segue reference="277-5l-Co5"/>
+        <segue reference="pe7-lv-LhL"/>
     </inferredMetricsTieBreakers>
 </document>
