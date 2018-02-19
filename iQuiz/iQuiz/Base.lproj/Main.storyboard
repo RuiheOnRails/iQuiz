@@ -245,7 +245,7 @@
                                 <rect key="frame" x="15" y="258.5" width="345" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="hoq-mz-eId">
-                                        <rect key="frame" x="3.5" y="0.0" width="338" height="75"/>
+                                        <rect key="frame" x="14.5" y="0.0" width="316" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct answer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkc-5f-SZr">
                                                 <rect key="frame" x="0.0" y="0.0" width="126.5" height="75"/>
@@ -254,15 +254,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct answer placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmE-Ji-EOs">
-                                                <rect key="frame" x="126.5" y="0.0" width="211.5" height="75"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="126.5" y="0.0" width="189.5" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7X8-xx-SM0">
-                                        <rect key="frame" x="23.5" y="75" width="298.5" height="75"/>
+                                        <rect key="frame" x="33" y="75" width="279.5" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You answered: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzF-bI-ZCA">
                                                 <rect key="frame" x="0.0" y="0.0" width="116" height="75"/>
@@ -271,8 +271,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userAnswerPlaceHolder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upW-La-yTk">
-                                                <rect key="frame" x="116" y="0.0" width="182.5" height="75"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="116" y="0.0" width="163.5" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -398,7 +398,7 @@
         <image name="marvel" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="277-5l-Co5"/>
-        <segue reference="pe7-lv-LhL"/>
+        <segue reference="ixN-7I-t9X"/>
+        <segue reference="OqT-UU-FnF"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -18,17 +18,15 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var btnAnswer1: UIButton!
     @IBOutlet weak var btnAnswer4: UIButton!
     
-    //following variables are passed around viewcontrollers to keep track of which question is displayed
+    var jsonData: [Quiz]? = nil
+    var categoryIndex: Int = -1
     var currentQuestion = 0;
-    var questions: [String] = ["Question 1", "Question 2", "Question 3"]
-    var choices: [[String]] = [["answer 1,1", "answer 1,2" , "answer 1,3", "answer 1,4"],["answer 2,1", "answer 2,2" , "answer 2,3", "answer 2,4"],["answer 3,1", "answer 3,2" , "answer 3,3", "answer 3,4"]]
-    var correctAnswer: [Int] = [1,1,1];
-    var lastSelectedAnswer = -1;
+    var lastSelectedAnswer: Int = -1
     var questionAnswered = 0;
     var questionRight = 0;
     
     @IBAction func answerOneSelected(_ sender: UIButton) {
-        lastSelectedAnswer = 0;
+        lastSelectedAnswer = 0
         sender.backgroundColor = UIColor.lightGray
         btnAnswer2.backgroundColor = UIColor.white
         btnAnswer3.backgroundColor = UIColor.white
@@ -36,7 +34,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func answerTwoSelected(_ sender: UIButton) {
-        lastSelectedAnswer = 1;
+        lastSelectedAnswer = 1
         sender.backgroundColor = UIColor.lightGray
         btnAnswer1.backgroundColor = UIColor.white
         btnAnswer3.backgroundColor = UIColor.white
@@ -44,7 +42,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func answerThreeSelected(_ sender: UIButton) {
-        lastSelectedAnswer = 2;
+        lastSelectedAnswer = 2
         sender.backgroundColor = UIColor.lightGray
         btnAnswer1.backgroundColor = UIColor.white
         btnAnswer2.backgroundColor = UIColor.white
@@ -52,7 +50,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func answerFourSelected(_ sender: UIButton) {
-        lastSelectedAnswer = 3;
+        lastSelectedAnswer = 3
         sender.backgroundColor = UIColor.lightGray
         btnAnswer1.backgroundColor = UIColor.white
         btnAnswer2.backgroundColor = UIColor.white
@@ -60,13 +58,16 @@ class QuestionViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblQuestion.text = questions[currentQuestion];
-        btnAnswer1.setTitle(choices[currentQuestion][0], for: .normal)
-        btnAnswer2.setTitle(choices[currentQuestion][1], for: .normal)
-        btnAnswer3.setTitle(choices[currentQuestion][2], for: .normal)
-        btnAnswer4.setTitle(choices[currentQuestion][3], for: .normal)
+        
+        lblQuestion.text = jsonData?[categoryIndex].questions[currentQuestion].text
+        btnAnswer1.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[0], for: .normal)
+        btnAnswer2.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[1], for: .normal)
+        btnAnswer3.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[2], for: .normal)
+        btnAnswer4.setTitle(jsonData?[categoryIndex].questions[currentQuestion].answers[3], for: .normal)
+        
         // Do any additional setup after loading the view.
     }
+
     
     @IBAction func submitPressed(_ sender: Any) {
         if(lastSelectedAnswer == -1){
@@ -83,13 +84,12 @@ class QuestionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "toReveal"){
             let dest = segue.destination as! AnswerViewController
-            dest.answered = lastSelectedAnswer
+            dest.lastSelectedAnswer = lastSelectedAnswer
+            dest.categoryIndex = categoryIndex
+            dest.jsonData = jsonData
             dest.currentQuestion = currentQuestion
-            dest.questions = questions
-            dest.correctAnswer = correctAnswer
             dest.questionAnswered = questionAnswered
             dest.questionRight = questionRight
-            dest.choices = choices
         }
     }
     
@@ -97,16 +97,4 @@ class QuestionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
