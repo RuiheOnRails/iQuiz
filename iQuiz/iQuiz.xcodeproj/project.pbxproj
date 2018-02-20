@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D04426842037723300F0B484 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04426832037723300F0B484 /* QuestionViewController.swift */; };
+		D04A0ECF203BA7BD00273527 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A0ECE203BA7BD00273527 /* Reachability.swift */; };
 		D063D63F203231F500742955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063D63E203231F500742955 /* AppDelegate.swift */; };
 		D063D641203231F500742955 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063D640203231F500742955 /* ViewController.swift */; };
 		D063D644203231F500742955 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D063D642203231F500742955 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		D04426832037723300F0B484 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		D04A0ECE203BA7BD00273527 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		D063D63B203231F500742955 /* iQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D063D63E203231F500742955 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D063D640203231F500742955 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				D063D64A203231F500742955 /* Info.plist */,
 				D091C0C42037A71500B1E566 /* AnswerViewController.swift */,
 				D0657C4A2037BC020038BF6F /* FinishedViewController.swift */,
+				D04A0ECE203BA7BD00273527 /* Reachability.swift */,
 			);
 			path = iQuiz;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04A0ECF203BA7BD00273527 /* Reachability.swift in Sources */,
 				D0657C4B2037BC020038BF6F /* FinishedViewController.swift in Sources */,
 				D063D6512032372B00742955 /* CustomTableViewCell.swift in Sources */,
 				D063D641203231F500742955 /* ViewController.swift in Sources */,
