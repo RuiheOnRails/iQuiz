@@ -97,6 +97,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 fetchJson(jsonUrlString)
             }
         }else{
+            let alert = UIAlertController(title: "No Internet", message: "Using local data", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             print("no internet, grabbing from user default");
             let anyData = defaults.object(forKey: "quizData")
             if(anyData == nil){
