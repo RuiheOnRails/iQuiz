@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var elements: [String] = ["science", "marvel", "math"]
     var titles: [String] = []
     var descriptions: [String] = []
-    var jsonUrlString: String = "http://tednewardsandbox.site44.com/questions.json"
+    var jsonUrlString: String = UserDefaults.standard.string(forKey: "url") ?? "http://tednewardsandbox.site44.com/questions.json"
     
     //try this url too: https://raw.githubusercontent.com/RuiheOnRails/iQuiz/master/moreQuiz.json
     // note! sometimes copy and pasting into the simulator doesnt work, need to type it
@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func settingsPressed(_ sender: Any) {
         let alert = UIAlertController(title: "Settings", message: "Enter Data URL", preferredStyle: UIAlertControllerStyle.alert)
-
+        
         alert.addTextField { (textField: UITextField) in
             self.urlTextField = textField
             self.urlTextField.placeholder = "Enter url here"
@@ -136,7 +136,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func fetchJson(_ fetchUrl: String){
-       
+        
         guard let url = URL(string: fetchUrl) else {return}
         URLSession.shared.dataTask(with: url) { (data, res, err) in
             guard let data = data else {
@@ -159,7 +159,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             DispatchQueue.main.async{
                 self.tableView.reloadData()
             }
-        }.resume()
+            }.resume()
     }
     
     func failDownloadAlert(){

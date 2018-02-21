@@ -17,6 +17,7 @@
 		D063D6512032372B00742955 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D063D6502032372B00742955 /* CustomTableViewCell.swift */; };
 		D0657C4B2037BC020038BF6F /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0657C4A2037BC020038BF6F /* FinishedViewController.swift */; };
 		D091C0C52037A71500B1E566 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D091C0C42037A71500B1E566 /* AnswerViewController.swift */; };
+		D0D78BC1203CF5720035DDD4 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D0D78BC0203CF5720035DDD4 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D063D6502032372B00742955 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D0657C4A2037BC020038BF6F /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		D091C0C42037A71500B1E566 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		D0D78BC0203CF5720035DDD4 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				D063D63E203231F500742955 /* AppDelegate.swift */,
+				D0D78BC0203CF5720035DDD4 /* Settings.bundle */,
 				D063D640203231F500742955 /* ViewController.swift */,
 				D063D642203231F500742955 /* Main.storyboard */,
 				D04426832037723300F0B484 /* QuestionViewController.swift */,
@@ -138,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D78BC1203CF5720035DDD4 /* Settings.bundle in Resources */,
 				D063D649203231F500742955 /* LaunchScreen.storyboard in Resources */,
 				D063D646203231F500742955 /* Assets.xcassets in Resources */,
 				D063D644203231F500742955 /* Main.storyboard in Resources */,
